@@ -40,12 +40,12 @@ library(nortest)
 library(QRM)
 
 # functions
-source("~/Desktop/Time Series Forecasting/Useful/TV-HMM/S&P/functions.R")
-source("~/Desktop/Time Series Forecasting/Useful/TV-HMM/S&P/depmixDistributions.R")
+source("./functions_custom.R")
+source("./distributions_custom.R")
 
 ### load data ===============================================================
 
-data = read.csv("/Users/karstencadley/Desktop/Time Series Forecasting/Data/S&P/SP500.csv", header = TRUE)
+data = read.csv("./Data/SP500.csv", header = TRUE)
 data$Price = data$SP500
 data$Date = data$observation_date
 stats_plot(data, "Price")

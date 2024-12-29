@@ -28,7 +28,7 @@ library(MASS)
 
 ### loading data ===============================================================
 
-data = read.csv("/Users/karstencadley/Desktop/Time Series Forecasting/Data/Bitcoin/Daily_01DEC14-20DEC2024_FRED.csv", header = TRUE)
+data = read.csv("./Data/BITCOIN.csv", header = TRUE)
 
 # convert to time series
 data$Price = log(data$Price)

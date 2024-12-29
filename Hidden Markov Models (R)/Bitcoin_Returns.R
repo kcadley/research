@@ -40,12 +40,12 @@ library(nortest)
 library(QRM)
 
 # functions
-source("~/Desktop/Time Series Forecasting/Useful/TV-HMM/S&P/functions.R")
-source("~/Desktop/Time Series Forecasting/Useful/TV-HMM/S&P/depmixDistributions.R")
+source("./functions_custom.R")
+source("./distributions_custom.R")
 
 ### load data ===============================================================
 
-data = read.csv("/Users/karstencadley/Desktop/Time Series Forecasting/Data/Bitcoin/Daily_01DEC14-20DEC2024_FRED.csv", header = TRUE)
+data = read.csv("./Data/BITCOIN.csv", header = TRUE)
 data$Price = data$Price
 data$Date = data$Date
 stats_plot(data, "Price")

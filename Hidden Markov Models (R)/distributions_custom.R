@@ -1,3 +1,4 @@
+library(depmixS4)
 
 
 ### STUDENT'S T =========
