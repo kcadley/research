@@ -1,7 +1,7 @@
-# Financial Data Research and Modeling Repository
+# Financial Research and Modeling Repository
 
 ## Overview
-Welcome to the Financial Data Research and Modeling repository. This space is dedicated to exploring, analyzing, and modeling financial data with a focus on instrument pricing and related market dynamics. It serves as both a research platform and a workspace for developing innovative approaches to financial analysis.
+Welcome to the Financial Research and Modeling repository. This space is dedicated to exploring, analyzing, and modeling financial data with a focus on instrument pricing and related market dynamics. It serves as both a research platform and a workspace for developing innovative approaches to financial analysis.
 
 ## Objectives
 - Conduct research on financial datasets to uncover insights and trends.
