@@ -303,3 +303,34 @@ median_smooth = function(data, window_size = 3)
   return(smoothed)
   
 }
+
+fit_plot = function(data, y0, fit, y1)
+{
+  
+  data$Obs = c(1:nrow(data))
+  fit$Obs = c(1:nrow(fit))
+  
+  dataPlt = ggplot(data=data, aes(x=Obs, y=!!sym(y0))) +
+    geom_line(linetype=1, color="black") + 
+    geom_line(data=fit, aes(x=Obs, y=!!sym(y1)), linetype=2, color="blue") +
+    theme_minimal() +
+    labs(title="Fit-to-Data") +
+    theme(plot.title = element_text(face = "bold"),
+          plot.margin = margin(5, 5, 5, 5),
+          plot.background = element_rect(fill = "white", color = "white"))
+  
+  # zoomed in time
+  zoomPlt = ggplot(data=tail(data, 100), aes(x=Obs, y=!!sym(y0))) +
+    geom_line(linetype=1, color="black") +
+    geom_line(data=tail(fit, 100), aes(x=Obs, y=!!sym(y1)), linetype=2, color="blue") +
+    theme_minimal() +
+    labs(title="Last 100 Obs.") +
+    theme(plot.title = element_text(face = "bold"),
+          plot.margin = margin(5, 5, 5, 5),
+          plot.background = element_rect(fill = "white", color = "white"))
+  
+  finalPlt = dataPlt / zoomPlt
+  
+  return(finalPlt)
+  
+}
