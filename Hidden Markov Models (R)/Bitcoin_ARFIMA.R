@@ -94,7 +94,7 @@ for (p in 0:2)
   {
     
     # ARFIMA (dynamic mean)
-    testModel = arfima(fracData$Price, order=c(p, 0, q), fixed=list(frac=fracModel$d), dmean=TRUE)
+    testModel = arfima(data$Price, order=c(p, 0, q), fixed=list(frac=fracModel$d), dmean=TRUE)
     resids = residuals(testModel)[[1]]
     testAICc = custom_AICc(resids, p, q, 1)  # additional param for dynamic mean
     
@@ -105,7 +105,7 @@ for (p in 0:2)
     }
     
     # ARFIMA (no dynamic mean)
-    testModel = arfima(fracData$Price, order=c(p, 0, q), fixed=list(frac=fracModel$d), dmean=FALSE)
+    testModel = arfima(data$Price, order=c(p, 0, q), fixed=list(frac=fracModel$d), dmean=FALSE)
     resids = residuals(testModel)[[1]]
     testAICc = custom_AICc(resids, p, q, 0)
     
